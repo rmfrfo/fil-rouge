@@ -42,8 +42,8 @@
         </a>
         <span class="avatar" aria-hidden="true">CM</span>
         <div class="user__info">
-          <p class="user__name">{{ userName() }}</p>
-          <p class="user__role">Développeuse</p>
+          <p class="user__name">{{ currentUser.firstName }} {{ currentUser.lastName }}</p>
+          <p class="user__role">{{ currentUser.jobTitle }}</p>
         </div>
         <a href="login.html" class="icon-link">
           <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
@@ -83,10 +83,15 @@
     <div class="container">
       <div class="page-header">
         <div>
-          <h1>Bonjour {{ userName() }}</h1>
+          <h1>Bonjour {{ currentUser.firstName }}</h1>
           <p class="page-header__subtitle">Résumé de votre activité au {{ currentDate }}</p>
         </div>
       </div>
+      <section class="card" aria-labelledby="titre-prochain-conge">
+        <h2 id="titre-prochain-conge">Prochain congé</h2>
+        <p>{{ nextLeaveType }} du {{ nextLeave.startDate }} au {{ nextLeave.endDate }}</p>
+        <span class="badge badge--pending">{{ nextLeaveStatus }}</span>
+      </section>
 
       <router-outlet />
     </div>
