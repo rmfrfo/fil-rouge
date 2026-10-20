@@ -36,10 +36,10 @@
         />
       </svg>
     </a>
-    <span class="avatar" aria-hidden="true">CM</span>
+    <span class="avatar" aria-hidden="true">{{ initials() }}</span>
     <div class="user__info">
-      <p class="user__name">{{ currentUser().firstName }} {{ currentUser().lastName }}</p>
-      <p class="user__role">{{ currentUser().jobTitle }}</p>
+      <p class="user__name">{{ user().firstName }} {{ user().lastName }}</p>
+      <p class="user__role">{{ user().jobTitle }}</p>
     </div>
     <a href="login.html" class="icon-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">

@@ -2,10 +2,11 @@
 
 <div class="app" [class.app--nav-open]="navOpen()">
   <app-topbar
-    [appName]="appName"
+    [user]="currentUser"
+    initials="CM"
     [navOpen]="navOpen()"
     (menuToggle)="toggleNav()"
-    [currentUser]="currentUser"
+    appName="TechCorp"
   />
 
   <app-sidebar />
