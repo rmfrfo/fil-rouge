@@ -1,0 +1,54 @@
+<button
+  class="topbar__menu"
+  type="button"
+  [attr.aria-expanded]="navOpen()"
+  (click)="toggleNav()"
+  aria-expanded="false"
+  aria-controls="navigation"
+>
+  <svg
+    class="nav__icon"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <path d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+  <span class="sr-only">Ouvrir le menu</span>
+</button>
+
+<a class="brand" href="dashboard-employe.html">
+  <img class="brand__logo" src="logo.svg" alt="" width="32" height="32" />
+  {{ appName() }}
+</a>
+
+<div class="topbar__actions">
+  <div class="user">
+    <a href="#" class="icon-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path
+          fill="currentColor"
+          d="M10 21h4c0 1.1-.9 2-2 2s-2-.9-2-2m11-2v1H3v-1l2-2v-6c0-3.1 2-5.8 5-6.7V4c0-1.1.9-2 2-2s2 .9 2 2v.3c3 .9 5 3.6 5 6.7v6zm-4-8c0-2.8-2.2-5-5-5s-5 2.2-5 5v7h10z"
+        />
+      </svg>
+    </a>
+    <span class="avatar" aria-hidden="true">CM</span>
+    <div class="user__info">
+      <p class="user__name">{{ currentUser().firstName }} {{ currentUser().lastName }}</p>
+      <p class="user__role">{{ currentUser().jobTitle }}</p>
+    </div>
+    <a href="login.html" class="icon-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path
+          fill="currentColor"
+          d="m17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5M4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4z"
+        />
+      </svg>
+    </a>
+  </div>
+</div>
