@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Employee } from '../../models/employee';
 
 @Component({
@@ -12,7 +12,7 @@ import { Employee } from '../../models/employee';
 })
 export class Topbar {
   appName = input.required<string>();
-  navOpen = input.required<boolean>();
-  toggleNav = input.required<() => void>();
+  navOpen = input(false);
+  menuToggle = output<void>();
   currentUser = input.required<Employee>();
 }

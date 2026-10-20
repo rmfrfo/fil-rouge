@@ -4,7 +4,7 @@
   <app-topbar
     [appName]="appName"
     [navOpen]="navOpen()"
-    [toggleNav]="toggleNav"
+    (menuToggle)="toggleNav()"
     [currentUser]="currentUser"
   />
 

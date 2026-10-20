@@ -2,7 +2,7 @@
   class="topbar__menu"
   type="button"
   [attr.aria-expanded]="navOpen()"
-  (click)="toggleNav()"
+  (click)="menuToggle.emit()"
   aria-expanded="false"
   aria-controls="navigation"
 >
