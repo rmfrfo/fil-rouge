@@ -6,9 +6,10 @@ import { Sidebar } from './layout/sidebar/sidebar';
 import { Topbar } from './layout/topbar/topbar';
 import { StatCard } from './features/dashboard/stat-card/stat-card';
 import { StatusBadge } from './shared/status-badge/status-badge';
+import { Dashboard } from './features/dashboard/dashboard/dashboard';
 
 @Component({
-  imports: [RouterOutlet, Sidebar, Topbar, StatCard, StatusBadge],
+  imports: [RouterOutlet, Sidebar, Topbar, StatCard, StatusBadge, Dashboard],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
