@@ -21,8 +21,14 @@
       <section class="card" aria-labelledby="titre-prochain-conge">
         <h2 id="titre-prochain-conge">Prochain congé</h2>
         <p>{{ nextLeaveType }} du {{ nextLeave.startDate }} au {{ nextLeave.endDate }}</p>
-        <span class="badge badge--pending">{{ nextLeaveStatus }}</span>
+        <app-status-badge [status]="nextLeave.status" />
       </section>
+      <ul class="grid-auto list" role="list">
+        <li>
+          <app-stat-card label="Congés payés restants" [value]="10" unit="jours" [max]="25" />
+        </li>
+        <li><app-stat-card label="RTT restants" [value]="6" unit="jours" /></li>
+      </ul>
 
       <router-outlet />
     </div>

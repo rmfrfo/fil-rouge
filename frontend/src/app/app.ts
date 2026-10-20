@@ -4,9 +4,11 @@ import { Employee } from './models/employee';
 import { LEAVE_STATUS_LABELS, LEAVE_TYPE_LABELS, LeaveRequest } from './models/leave-request';
 import { Sidebar } from './layout/sidebar/sidebar';
 import { Topbar } from './layout/topbar/topbar';
+import { StatCard } from './features/dashboard/stat-card/stat-card';
+import { StatusBadge } from './shared/status-badge/status-badge';
 
 @Component({
-  imports: [RouterOutlet, Sidebar, Topbar],
+  imports: [RouterOutlet, Sidebar, Topbar, StatCard, StatusBadge],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
