@@ -1,5 +1,5 @@
 export type LeaveType = 'paid' | 'rtt' | 'sick' | 'unpaid';
-export type LeaveStatus = 'pending' | 'in-progress' | 'approved' | 'rejected';
+export type LeaveStatus = 'pending' | 'manager-approved' | 'approved' | 'rejected';
 
 export interface LeaveRequest {
   id: number;
@@ -20,7 +20,7 @@ export const LEAVE_TYPE_LABELS: Record<LeaveType, string> = {
 
 export const LEAVE_STATUS_LABELS: Record<LeaveStatus, string> = {
   pending: 'En attente manager',
-  'in-progress': 'En attente RH',
+  'manager-approved': 'Validé par manager',
   approved: 'Validé',
   rejected: 'Rejeté',
 };
